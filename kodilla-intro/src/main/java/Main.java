@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        String myName = "Maciej";
-        int myAge = 22;
-        double height = 1.78;
-        char carClass = 'A';
-        boolean isGoodProgrammer = true;
-        System.out.println(myName);
+
+        User albert = new User("Albert", 32);
+        User bartosz = new User("Bartosz", 22);
+        User czarek = new User("Czarek", 18);
+
+        User [] users = {albert, bartosz, czarek};
+        int numberOfElements = users.length;
     }
 }
