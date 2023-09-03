@@ -6,24 +6,13 @@ public class FirstLetter {
         Scanner scanner = new Scanner (System.in);
         String firstLetter = scanner.next().toUpperCase();
 
-        switch(firstLetter) {
-            case "B":
-                System.out.println("Black");
-                break;
-            case "R":
-                System.out.println("Red");
-                break;
-            case "G":
-                System.out.println("Green");
-                break;
-            case "W":
-                System.out.println("White");
-                break;
-            case "O":
-                System.out.println("Orange");
-                break;
-            default:
-                System.out.println("Try again");
+        switch (firstLetter) {
+            case "B" -> System.out.println("Black");
+            case "R" -> System.out.println("Red");
+            case "G" -> System.out.println("Green");
+            case "W" -> System.out.println("White");
+            case "O" -> System.out.println("Orange");
+            default -> System.out.println("Try again");
         }
         
         
