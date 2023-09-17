@@ -1,18 +1,19 @@
 package com.kodilla.abstracts.homework;
 public class Person {
-    public static void main(String[] args) {
+
         String firstName;
         int age;
-        String job;
+        Job job;
 
-        Accountant accountant = new Accountant();
-        accountant.showResponsibilities();
+        public Person(String firstName, int age, Job job) {
+            this.firstName = firstName;
+            this.age = age;
+            this.job = job;
+        }
 
-        Mechanic mechanic = new Mechanic();
-        mechanic.showResponsibilities();
+        public void showResponsibilities() {
+            System.out.println(firstName + " is " + age + " year's old and is responsible for " + job.getResponsibilities());
+        }
 
-        Teacher teacher = new Teacher();
-        teacher.showResponsibilities();
 
-    }
 }

@@ -11,18 +11,13 @@ public abstract class Job {
     }
 
     public double getSalary() {
+
         return salary;
     }
 
     public String getResponsibilities() {
+
         return responsibilities;
     }
 
-    public void showSalary() {
-        System.out.println();
-    }
-
-    public void showResponsibilities() {
-        System.out.println();
-    }
 }
