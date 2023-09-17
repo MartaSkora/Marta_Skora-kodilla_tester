@@ -12,4 +12,8 @@ public class Calculator {
         return a - b;
     }
 
+    public double square(double a) {
+        return Math.pow(a, 2);
+    }
+
 }

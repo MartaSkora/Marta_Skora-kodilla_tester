@@ -1,10 +1,10 @@
-public class Main {
-    public static void main(String[] args) {
-
-        Book test = Book.of("Isaac Asimov", "The Galaxy");
-        System.out.println(test);
-
+//public class Main {
+//    public static void main(String[] args) {
 //
+//        Book test = Book.of("Isaac Asimov", "The Galaxy");
+//        System.out.println(test);
+//
+////
 //        User albert = new User("Albert", 32);
 //        User bartosz = new User("Bartosz", 22);
 //        User czarek = new User("Czarek", 18);
@@ -22,6 +22,5 @@ public class Main {
 //                System.out.println(users[i].name);
 //            }
 //        }
-    }
-}
+
 

@@ -22,12 +22,12 @@ public class Application {
             System.out.println("Metoda odejmująca nie działa poprawnie dla licz " + a + " i " + b);
         }
 
-        int powResult = (int) Math.pow(a, b);
-        boolean correctPowResult = ResultChecker.assertEquals(390625, powResult);
-        if (correctPowResult) {
-            System.out.println("Metoda podnoszącą liczbę całkowitą do kwadratu działa poprawnie dla liczb " + a + " i " + b);
+        int squareResult = (int) calculator.square(a);
+        boolean correctSquareResult = ResultChecker.assertEquals(25, squareResult);
+        if (correctSquareResult) {
+            System.out.println("Metoda podnoszącą liczbę całkowitą do kwadratu działa poprawnie dla liczby " + a);
         } else {
-            System.out.println("Metoda podnoszącą liczbę całkowitą do kwadratu nie działa poprawnie dla liczb " + a + " i " +b);
+            System.out.println("Metoda podnoszącą liczbę całkowitą do kwadratu nie działa poprawnie dla liczby " + a);
         }
 
 
