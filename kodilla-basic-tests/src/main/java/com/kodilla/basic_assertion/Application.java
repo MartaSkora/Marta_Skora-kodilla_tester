@@ -4,7 +4,7 @@ public class Application {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        int a = 5;
+        int a = -5;
         int b = 8;
         int sumResult = calculator.sum(a, b);
         boolean correct = ResultChecker.assertEquals(13, sumResult);
@@ -23,7 +23,7 @@ public class Application {
         }
 
         int squareResult = (int) calculator.square(a);
-        boolean correctSquareResult = ResultChecker.assertEquals(25, squareResult);
+        boolean correctSquareResult = ResultChecker.assertEquals(-25, squareResult);
         if (correctSquareResult) {
             System.out.println("Metoda podnoszącą liczbę całkowitą do kwadratu działa poprawnie dla liczby " + a);
         } else {
