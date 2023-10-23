@@ -8,7 +8,6 @@ import com.kodilla.collections.interfaces.homework.Opel;
 import java.util.Random;
 
 public class CarsApplication {
-
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
