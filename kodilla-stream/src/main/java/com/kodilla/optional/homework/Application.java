@@ -15,11 +15,16 @@ public class Application {
         studentList.add(new Student("Fiona", null));
 
         for(Student student : studentList) {
-            Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+            String name = getTeacherName(student);
             System.out.println("Student's name: " + student.getName() + " Teacher's name: "
-                     + optionalTeacher.orElse(new Teacher("<undefined>")).getName());
+                     + name);
         }
 
+    }
 
+    public static String getTeacherName(Student student) {
+        Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+        String name = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+        return name;
     }
 }
