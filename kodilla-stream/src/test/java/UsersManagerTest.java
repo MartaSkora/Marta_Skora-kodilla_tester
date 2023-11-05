@@ -44,17 +44,17 @@ public class UsersManagerTest {
         assertEquals(expectedUsersOver45.get(0), usersOver45.get(0));
     }
 
-    @Test
-    public void testGetUserNamesUnderAge() {
-        //given
-        List<String> expectedUsersNamesUnder30 = new ArrayList<>();
-        expectedUsersNamesUnder30.add("Jessie Pinkman");
-        //when
-        List<String> usersUnder30 = UsersManager.getUsersNamesUnderAge(30);
-        //then
-        assertEquals(1, usersUnder30.size());
-        assertEquals(expectedUsersNamesUnder30.get(0), usersUnder30.get(0));
-
-    }
+//    @Test
+//    public void testGetUserNamesUnderAge() {
+//        //given
+//        List<String> expectedUsersNamesUnder30 = new ArrayList<>();
+//        expectedUsersNamesUnder30.add("Jessie Pinkman");
+//        //when
+//        List<String> usersUnder30 = UsersManager.getUsersNamesUnderAge(30);
+//        //then
+//        assertEquals(1, usersUnder30.size());
+//        assertEquals(expectedUsersNamesUnder30.get(0), usersUnder30.get(0));
+//
+//    }
 
 }

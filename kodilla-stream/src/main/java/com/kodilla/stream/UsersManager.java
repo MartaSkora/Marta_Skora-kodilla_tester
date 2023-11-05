@@ -48,20 +48,19 @@ public class UsersManager {
     public static List<User> getUsersOverAge(int age) {
         List<User> usersOverAge = UsersRepository.getUsersList()
                 .stream()
-                .filter(user -> user.getAge() > age)
+                .filter(user -> user.getAge() >= age)
                 .collect(Collectors.toList());
 
         return usersOverAge;
     }
 
-    public static List<String> getUsersNamesUnderAge(int age) {
-        List<String> usersNamesUnderAge = UsersRepository.getUsersList()
+    public static List<User> getUsersUnderAge(int age) {
+        List<User> usersUnderAge = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getAge() < age)
-                .map(UsersManager::getUserName)
                 .collect(Collectors.toList());
 
-        return usersNamesUnderAge;
+        return usersUnderAge;
     }
 
 

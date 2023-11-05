@@ -1,11 +1,6 @@
 package com.kodilla.stream.homework;
 
-import com.kodilla.stream.User;
 import com.kodilla.stream.UsersManager;
-import com.kodilla.stream.UsersRepository;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class ForumStats {
 
@@ -20,9 +15,20 @@ public class ForumStats {
         return avgPostsForUsersAbove40;
     }
 
+    public static double averagePostsForUsersUnder40() {
+
+        double avgPostsForUsersUnder40 = UsersManager.getUsersUnderAge(40)
+                .stream()
+                .mapToDouble(user -> user.getNumberOfPost())
+                .average()
+                .getAsDouble();
+
+        return avgPostsForUsersUnder40;
+    }
+
     public static void main(String[] args) {
-        double averageAbove40 = averagePostsForUsersAbove40();
-        System.out.println("The average number of posts for users whose age is over 40: " + averageAbove40);
+        System.out.println("The average number of posts for users whose age is over 40: " + averagePostsForUsersAbove40());
+        System.out.println("The average number of posts for users whose age is under 40: " + averagePostsForUsersUnder40());
     }
 
 }
