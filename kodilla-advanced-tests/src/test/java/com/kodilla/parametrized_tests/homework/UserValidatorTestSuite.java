@@ -3,7 +3,6 @@ package com.kodilla.parametrized_tests.homework;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
