@@ -23,12 +23,13 @@ public class GamblingMachine {
         }
     }
 
-    public boolean isAnyNumberOutOfDeclaredScope(Set<Integer> numbers) {
+    private boolean isAnyNumberOutOfDeclaredScope(Set<Integer> numbers) {
         return numbers.stream()
                 .anyMatch(number -> number < 1 || number > 49); // check if number is less than 1 or greater than 49
     }
 
     private boolean isNotCorrectSize(Set<Integer> numbers) {
+
         return numbers.size() != 6;
     }
 

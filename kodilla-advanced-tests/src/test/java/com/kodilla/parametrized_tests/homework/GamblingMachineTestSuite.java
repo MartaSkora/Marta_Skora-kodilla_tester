@@ -30,18 +30,18 @@ class GamblingMachineTestSuite {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/invalidNumbers.csv")
-    public void shouldReturnFalseIfInputIsInvalid(String invalidNumbers) throws InvalidNumbersException {
+    @CsvFileSource(resources = "/notCorrectSizeNumbers.csv")
+    public void shouldThrowInvalidNumbersExceptionIfNotCorrectSizeNumbers(String invalidNumbers) {
         Set<Integer> userNumbers = split(invalidNumbers);
         assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(userNumbers));
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/invalidNumbers.csv")
-    public void shouldReturnTrueForNumbersOutOfDeclaredScope(String invalidNumbers) {
+    @CsvFileSource(resources = "/outOfDeclaredScopeNumbers.csv")
+    public void shouldThrowInvalidNumbersExceptionIfOutOfDeclaredNumbers(String invalidNumbers) {
         Set<Integer> userNumbers = split(invalidNumbers);
-        boolean result = gamblingMachine.isAnyNumberOutOfDeclaredScope(userNumbers);
-        assertEquals(true, result);
+        assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(userNumbers));
     }
+
 
 }
