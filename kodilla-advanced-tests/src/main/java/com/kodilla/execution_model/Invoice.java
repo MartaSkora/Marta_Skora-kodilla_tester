@@ -8,6 +8,7 @@ public class Invoice {
     private List<Item> items = new ArrayList<>();
 
     public void addItem(Item item) {
+
         this.items.add(item);
     }
 
@@ -19,9 +20,11 @@ public class Invoice {
     }
 
     public void clear() {
+
         this.items.clear();
     }
     public int getSize() {
+
         return this.items.size();
     }
 }
